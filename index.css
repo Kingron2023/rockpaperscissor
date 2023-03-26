@@ -42,8 +42,7 @@ header>h2 {
     width: 100px;
     position: absolute;
     top: 0px;
-    left: -500px;
-    
+    left: -500px; 
 }
 #user_score {
     position: absolute;
@@ -126,11 +125,86 @@ header>h2 {
 }
 
 .refresh > a {
-    position: absolute;
-    top: 200px;
-    left: 450px;
     width: 500px;
     height: 50px;
     background: #034508;
     color: #fff;
 }
+
+.userChoice {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    background: #c8e714;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CompChoice {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    background: #c8e714;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+  @media screen and (max-width: 1024px) {
+    #player img {        
+        left: -300px; 
+    }
+    #user_score {
+        left: -200px;
+    }
+    #computer img {
+        right: -255px;  
+    }
+    #computer_score {
+        right: -145px;
+    }
+    .userChoice {
+        left: 100px;
+        top: 260px;
+    }
+    
+    .CompChoice {
+        right: 140px;
+        top: 260px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #player img {        
+        left: -250px; 
+    }
+    #user_score {
+        left: -150px;
+    }
+    #computer img {
+        right: -255px;  
+    }
+    #computer_score {
+        right: -145px;
+    }
+    .userChoice {
+        left: 100px;
+        top: 260px;
+    }
+    
+    .CompChoice {
+        right: 140px;
+        top: 260px;
+    }
+  }

@@ -8,6 +8,9 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
+
+
+
 //computer choices
 function getComputerChoice() {
     const choices = ['r', 'p', 's'];
@@ -16,9 +19,17 @@ function getComputerChoice() {
 }
 
 function convertToWord(letter) {
-    if (letter === "r") return "ELEPHANT";
-    if (letter === "p") return "ANT";
-    return "ANTEATER";
+    if (letter === "r") {
+        return "ELEPHANT";
+    } 
+    
+    if (letter === "p") {
+        return "ANT"; 
+    } else {
+        return "ANTEATER";
+    }
+    
+    
 }
 
 function win(userChoice, computerChoice) {
@@ -26,46 +37,66 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. "You Win!"`;
-    //result_p.innerHTML = convertToWord (userChoice) + " " + "beats" + " " +  convertToWord(computerChoice) + "<br>" + ". You Win!";
-    userChoice_div.classList.add('green_glow'); //effects
-    setTimeout(() => userChoice_div.classList.remove('green_glow'), 300);
-    // setTimeout(function() {userChoice_div.classList.remove('green_glow')}, 300);
+    result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)} <br> <h2>"You Win"</h2>`;
+
+    function gameOver() {
+        if (userScore == 5) {
+            alert("You WIN, Wanna Play Again")
+        } else if (computerScore == 5) {
+            alert("You LOSE, Do you want to get your Revenge?")
+        }
+    }
+    gameOver();
 }
 
-setTimeout(function() {}, 1000);
-
 function lose(userChoice, computerChoice) {
-    const smallUserWord = "".fontsize(2).sup();
-    const smallCompWord = "".fontsize(2).sup();
     const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}."You Lost!"`;
-    //result_p.innerHTML = convertToWord (userChoice) + " " + "loses to" + " " +  convertToWord(computerChoice) + "<br>" + ". You Lost!";
-    userChoice_div.classList.add('red_glow'); //effects
-    setTimeout(() => userChoice_div.classList.remove('red_glow'), 300);
-    // setTimeout(function() {userChoice_div.classList.remove('red_glow')}, 300);
+    result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)} <br> <h2>"You Lose"</h2>`;
+
+    function gameOver() {
+        if (userScorer == 5) {
+            alert("You WIN, Wanna Play Again")
+        } else if (computerScore == 5) {
+            alert("You LOSE, Do you want to get your Revenge?")
+        }
+    }
+    gameOver();
 }
 
 function draw(userChoice, computerChoice) {
-    const smallUserWord = "".fontsize(2).sup();
-    const smallCompWord = "".fontsize(2).sup();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} ties ${convertToWord(computerChoice)}${smallCompWord}."It's a Draw!"`;
-    //result_p.innerHTML = convertToWord (userChoice) + " " + "ties" + " " +  convertToWord(computerChoice) + "<br>" + ". You Win!";
-    userChoice_div.classList.add('gray_glow'); //effects
-    setTimeout(() => userChoice_div.classList.remove('gray_glow'), 300);
-    //setTimeout(function() {userChoice_div.classList.remove('gray_glow')}, 300);
+    result_p.innerHTML = `${convertToWord(userChoice)} ties ${convertToWord(computerChoice)} <br> <h2>"DRAW"</h2>`;
+
+    function gameOver() {
+        if (userScore == 5) {
+            alert("You WIN, Wanna Play Again")
+        } else if (computerScore == 5) {
+            alert("You LOSE, Do you want to get your Revenge?")
+        }
+    }
+    gameOver();
 }
 
 
 //choices
+setTimeout(game, 10000);
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    // console.log ("userChoice => " + userChoice);
-    //  console.log ("computerChoice => " + computerChoice);
+    
+    if(computerChoice == "r" ) {
+        document.getElementById('compPick').innerText = "Elephant";
+        // document.getElementById('compPick').innerText = "Elephant";
+    } else if (computerChoice == "p") {
+        document.getElementById('compPick').innerText = "Ant";
+        // document.getElementById('compPick').innerText = "Ant";
+    } else {
+        document.getElementById('compPick').innerText = "Ant-eater";
+        // document.getElementById('compPick').innerText = "Ant-eater";        
+    }
+
     switch (userChoice + computerChoice) {
         case "rs":
         case "pr":
@@ -91,22 +122,28 @@ function main() {
 
     rock_div.addEventListener('click', function() {
         game("r");
-        //console.log("You chose Elephant");
+        document.getElementById('userPick').innerText = "Elephant";
     })
 
     paper_div.addEventListener('click', function() {
         game("p");
+        document.getElementById('userPick').innerText = "Ant";
         //console.log("You chose Ant");
     })
     scissors_div.addEventListener('click', function() {
         game("s");
+        document.getElementById('userPick').innerText = "Ant-eater";
         // console.log("You chose Anteater");
     })
 }
 
 main();
 
-/*const clearScore = function(){
-    document.getElementById("user_score").innerHTML = "0";
-    document.getElementById("computer_score").innerHTML = "0";
-};*/
+
+   
+
+
+
+
+  
+
