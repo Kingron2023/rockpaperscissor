@@ -41,9 +41,11 @@ function win(userChoice, computerChoice) {
 
     function gameOver() {
         if (userScore == 5) {
-            alert("You WIN, Wanna Play Again")
+            alert("You WIN, Score updating...")
+            alert("Do you want to play again? Press PLAY AGAIN button now...")
         } else if (computerScore == 5) {
-            alert("You LOSE, Do you want to get your Revenge?")
+            alert("You LOSE, Score updating...")
+            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
         }
     }
     gameOver();
@@ -57,10 +59,12 @@ function lose(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)} <br> <h2>"You Lose"</h2>`;
 
     function gameOver() {
-        if (userScorer == 5) {
-            alert("You WIN, Wanna Play Again")
+        if (userScore == 5) {
+            alert("You WIN, Score updating...")
+            alert("Do you want to play again? Press PLAY AGAIN button now...")
         } else if (computerScore == 5) {
-            alert("You LOSE, Do you want to get your Revenge?")
+            alert("You LOSE, Score updating...")
+            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
         }
     }
     gameOver();
@@ -72,9 +76,11 @@ function draw(userChoice, computerChoice) {
 
     function gameOver() {
         if (userScore == 5) {
-            alert("You WIN, Wanna Play Again")
+            alert("You WIN, Score updating...")
+            alert("Do you want to play again? Press PLAY AGAIN button now...")
         } else if (computerScore == 5) {
-            alert("You LOSE, Do you want to get your Revenge?")
+            alert("You LOSE, Score updating...")
+            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
         }
     }
     gameOver();
