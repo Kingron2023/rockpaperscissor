@@ -13,17 +13,6 @@ header {
     padding: 10px;
 }
 
-header>h1 {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: arial;
-}
-header>h2 {
-    color: rgb(138, 125, 194);
-    text-align: center;
-    font-family: arial;
-}
-
 #imgSet, #imgSet3 {
     opacity: 0.5;
     z-index: 1;
@@ -36,7 +25,7 @@ header>h2 {
     background-color: #fff;
 }
 
-#imgSet2, #imgSet3 {
+#imgSet2, #imgSet4 {
     opacity: 0.5;
     z-index: 1;
     position: absolute;
@@ -47,7 +36,16 @@ header>h2 {
     visibility: hidden;
 }
 
-
+header>h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: arial;
+}
+header>h2 {
+    color: rgb(138, 125, 194);
+    text-align: center;
+    font-family: arial;
+}
 
 .score_board {
     margin: 20px auto;
@@ -179,8 +177,45 @@ header>h2 {
     justify-content: center;
     align-items: center;
 }
+/* 
+@media screen and (max-width: 1440px) {
+    #imgSet, #imgSet3 {
+
+        top: 130px;
+        width: 500px;
+        height: 120px;
+        left: 470px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 130px;
+        width: 500px;
+        height: 120px;
+        left: 470px;
+    }
+    .result {
+        top: 150px;
+        left: 455px;
+  }
+} */
+
 
   @media screen and (max-width: 1024px) {
+    #imgSet, #imgSet3 {
+
+        top: 130px;
+        width: 320px;
+        height: 120px;
+        left: 350px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 130px;
+        width: 320px;
+        height: 120px;
+        left: 350px;
+    }
+
     #player img {        
         left: -280px; 
     }
@@ -218,6 +253,21 @@ header>h2 {
 }
 
   @media screen and (max-width: 768px) {
+    #imgSet, #imgSet3 {
+
+        top: 130px;
+        width: 306px;
+        height: 120px;
+        left: 230px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 130px;
+        width: 306px;
+        height: 120px;
+        left: 230px;
+    }
+
     #player img {    
         width: 70px;
         top: 40px;    
@@ -263,6 +313,21 @@ header>h2 {
   }
 
   @media screen and (max-width: 425px) {
+    #imgSet, #imgSet3 {
+
+        top: 135px;
+        width: 180px;
+        height: 90px;
+        left: 119px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 135px;
+        width: 180px;
+        height: 90px;
+        left: 119px;
+    }
+
     #player img {    
         width: 70px;
         top: 40px;    
@@ -329,6 +394,22 @@ header>h2 {
 }
 
 @media screen and (max-width: 375px) {
+    #imgSet, #imgSet3 {
+
+        top: 135px;
+        width: 180px;
+        height: 90px;
+        left: 91px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 135px;
+        width: 180px;
+        height: 90px;
+        left: 91px;
+    }
+    
+    
     #player img {    
         width: 50px;
         top: 60px;    
@@ -401,6 +482,21 @@ header>h2 {
 }
 
 @media screen and (max-width: 320px) {
+    #imgSet, #imgSet3 {
+
+        top: 135px;
+        width: 154px;
+        height: 80px;
+        left: 83px;
+    }
+
+    #imgSet2, #imgSet4 {
+        top: 135px;
+        width: 154px;
+        height: 80px;
+        left: 83px;
+    }
+
     #player img {    
         width: 30px;
         top: 65px;    
@@ -409,7 +505,7 @@ header>h2 {
     #user_score {
         font-size: 20px;
         top: 65px;
-        left: -10px;
+        left: -12px;
     }
     #computer img {
         width: 30px;
@@ -419,7 +515,7 @@ header>h2 {
     #computer_score {
         font-size: 20px;
         top: 65px;
-        right: -10px;
+        right: -12px;
     }
     .userChoice {
         left: 10px;
@@ -443,7 +539,7 @@ header>h2 {
      
     }
     .result {
-        font-size: 12px;
+        font-size: 10px;
         top: 130px;
         left: 2px;
     }

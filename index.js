@@ -40,12 +40,14 @@ function win(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)} <br> <h2>"You Win"</h2>`;
 
     function gameOver() {
-        if (userScore == 5) {
-            alert("You WIN, Score updating...")
-            alert("Do you want to play again? Press PLAY AGAIN button now...")
-        } else if (computerScore == 5) {
-            alert("You LOSE, Score updating...")
-            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
+        if (userScore == 3) {
+            setAttr();
+            setAttr2()
+
+            
+        } else if (computerScore == 3) {
+            setAttr3();
+            setAttr4();
         }
     }
     gameOver();
@@ -59,12 +61,14 @@ function lose(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)} <br> <h2>"You Lose"</h2>`;
 
     function gameOver() {
-        if (userScore == 5) {
-            alert("You WIN, Score updating...")
-            alert("Do you want to play again? Press PLAY AGAIN button now...")
-        } else if (computerScore == 5) {
-            alert("You LOSE, Score updating...")
-            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
+        if (userScore == 3) {
+            setAttr();
+            setAttr2()
+
+            
+        } else if (computerScore == 3) {
+            setAttr3();
+            setAttr4();
         }
     }
     gameOver();
@@ -75,12 +79,13 @@ function draw(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)} ties ${convertToWord(computerChoice)} <br> <h2>"DRAW"</h2>`;
 
     function gameOver() {
-        if (userScore == 5) {
-            alert("You WIN, Score updating...")
-            alert("Do you want to play again? Press PLAY AGAIN button now...")
-        } else if (computerScore == 5) {
-            alert("You LOSE, Score updating...")
-            alert("Do you want to have a revenge? Press PLAY AGAIN button now...")
+        if (userScore == 3) {
+            setAttr();
+            setAttr2()
+            
+        } else if (computerScore == 3) {
+            setAttr3();
+            setAttr4();
         }
     }
     gameOver();
@@ -144,6 +149,64 @@ function main() {
 }
 
 main();
+
+// YOU WIN ANIMATION
+function setAttr() {
+    let image1 = document.getElementById('imgSet');
+    image1.setAttribute('src', 'confeti.gif');
+    image1.style.visibility = "visible";
+    image1.style.opacity = "1";
+}
+function setAttr2() {
+    let image2 = document.getElementById('imgSet2');
+    image2.setAttribute('src', 'youWin2.png');
+    image2.style.visibility = "visible";
+    image2.style.opacity = "1";
+}
+
+// YOU LOOSE ANIMATION
+function setAttr3() {
+    let image3 = document.getElementById('imgSet3');
+    image3.setAttribute('src', 'bomb-explode2.gif');
+    image3.style.visibility = "visible";
+    image3.style.opacity = "1";
+}
+function setAttr4() {
+    let image4 = document.getElementById('imgSet4');
+    image4.setAttribute('src', 'youLose2.png');
+    image4.style.visibility = "visible";
+    image4.style.opacity = "1";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// function setAttr2() {
+//     let image2 = document.getElementById('imgSet2');
+//     image2.setAttribute('src', 'youWin.png');
+// }
+// function setAttr3() {
+//     let image3 = document.getElementById('imgSet2');
+//     image3.setAttribute('src', 'youLose.png');
+// }
+
+
+
+// function removeAttr() {
+//     let image = document.getElementById('imgSet');
+//     image.removeAttribute('src');
+// }
+
+
+
 
 
    
